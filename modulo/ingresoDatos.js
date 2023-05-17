@@ -11,29 +11,29 @@ const check_password = (position) => {
         let login_password = prompt("Por favor ingrese la contraseña");
 
         if (login_password === users[position].password) {
-            console.log('%cContraseña correcta', 'color: red; font-size: 25px;');
+            console.log('%cContraseña correcta', 'color: lightblue; font-size: 23px;');
             
             //Verificación tipo de usuario 
             if (users[position].type === 'administrador') {
-                console.info('%cEres administrador', 'color: red; font-size: 25px;');
+                console.info('%cEres administrador', 'color: lightblue; font-size: 23px;');
                 //Función administrador 
                 administrator(); 
 
             }
             else if (users[position].type === 'cliente') {
-                console.log('Eres cliente');
+                console.log('%cEres cliente', 'color: lightgreen; font-size: 23px;');
                 let amount_retirement = parseInt(prompt("Por favor indique cuanto va a retirar"));
                 //Función cliente 
                 customers(amount_retirement);
 
             }
             else {
-                console.log('%c No existe tipo de usuario', 'color: red; font-size: 25px;');
+                console.error(' No existe tipo de usuario');
             }
             break;
         }
         else {
-            console.log('%c Contraseña incorrecta', 'color: red; font-size: 25px;');
+            console.warn('Contraseña incorrecta');
         }
     }
 

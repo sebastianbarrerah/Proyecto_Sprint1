@@ -27,7 +27,7 @@ i = i + 1
         if (element === login_users) {
             found = true;
             users_found = index;
-            console.log('%cBienvenido','color: blue; font-size: 25px');
+            console.log('%cBienvenido','color: blue; font-size: 24px');
             check_password(users_found);
             return false;
             
@@ -42,7 +42,7 @@ i = i + 1
         //break;
     }
     else {
-        console.log('%cUsuario no existente, debe volver a ingresar el usuario','background: red; font-size: 25px');
+        console.error('Usuario no existente, debe volver a ingresar el usuario');
     }
 }
 

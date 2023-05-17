@@ -42,8 +42,6 @@ const administrator = () => {
 
     })
 
-    console.log("Total cajero", totalATM)
-
     console.log(" La cantidad que hay dentro del cajero es: ", totalATM, "Mil pesos")
     console.groupEnd("Resultados-administrador")
 }
